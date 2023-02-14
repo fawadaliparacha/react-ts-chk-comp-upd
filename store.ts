@@ -3,8 +3,8 @@ import {
   combineReducers,
   getDefaultMiddleware,
 } from '@reduxjs/toolkit';
-import authReducer from './auth/auth.slice';
-import storage from 'redux-persist/lib/storage';
+import authReducer from './auth.slice';
+// import storage from 'redux-persist/lib/storage';
 
 const customizedMiddleware = getDefaultMiddleware({
   serializableCheck: false,
@@ -24,4 +24,4 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) => customizedMiddleware,
 });
 
-export const persistor = persistStore(store);
+// export const persistor = persistStore(store);
